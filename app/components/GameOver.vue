@@ -11,12 +11,12 @@ const emit = defineEmits<{
 </script>
 
 <template>
-  <div class="h-full w-full flex flex-col items-center justify-center bg-slate-900 text-white p-6 animate-fade-in z-50">
+  <div class="h-full w-full flex flex-col items-center justify-center bg-white text-slate-800 p-6 animate-fade-in z-50">
     <div class="text-center space-y-6">
       <div class="text-6xl mb-2">👾</div>
-      <h1 class="text-5xl md:text-7xl font-serif text-slate-100 drop-shadow-lg">Game Over</h1>
-      <p class="text-xl md:text-2xl text-slate-400">
-        You mastered <span class="text-indigo-400 font-bold">{{ score }}</span> characters!
+      <h1 class="text-5xl md:text-7xl font-serif text-slate-900 drop-shadow-sm">Game Over</h1>
+      <p class="text-xl md:text-2xl text-slate-600">
+        You mastered <span class="text-orange-600 font-bold">{{ score }}</span> characters!
       </p>
       <div class="pt-8">
         <Button 

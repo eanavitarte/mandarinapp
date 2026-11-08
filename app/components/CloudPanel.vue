@@ -30,16 +30,16 @@ const handleManualSync = () => {
            <h2 class="text-2xl font-bold">Cloud Sync</h2>
       </div>
       <div class="space-y-6">
-        <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-6 text-center">
-            <p class="text-slate-600 mb-4 font-medium">Your progress is linked to Firebase Firestore.</p>
+        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6 text-center">
+            <p class="text-slate-700 mb-4 font-medium">Your progress is linked to Firebase Firestore.</p>
             <Button variant="primary" @click="handleManualSync" :isLoading="isSyncing" class="w-full py-3 text-lg shadow-lg">
                {{ isSyncing ? "Syncing..." : "Sync Session Data" }}
             </Button>
-            <p v-if="syncFeedback" class="text-xs text-indigo-600 mt-2 font-bold animate-fade-in">{{ syncFeedback }}</p>
-            <p v-else class="text-xs text-slate-400 mt-2">Update the cloud database with your current session progress.</p>
+            <p v-if="syncFeedback" class="text-xs text-orange-600 mt-2 font-bold animate-fade-in">{{ syncFeedback }}</p>
+            <p v-else class="text-xs text-slate-500 mt-2">Update the cloud database with your current session progress.</p>
         </div>
         <div>
-          <div class="mt-3 p-4 bg-slate-50 rounded-lg border border-slate-200 text-sm">
+          <div class="mt-3 p-4 bg-orange-50/40 rounded-lg border border-orange-100 text-sm">
               <p class="mb-2 font-bold text-slate-700">Firebase Configuration</p>
               <p class="text-slate-600 mb-4 font-sans">
                   Ensure your <code>.env.local</code> file is populated with the correct Firebase credentials for the database connection to work:

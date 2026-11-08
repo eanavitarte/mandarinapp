@@ -11,12 +11,12 @@ const props = withDefaults(defineProps<{
   type: 'button'
 })
 
-const baseStyle = "px-6 py-2.5 rounded-xl font-bold transition-all duration-200 shadow-sm flex items-center justify-center gap-2 outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+const baseStyle = "px-6 py-2.5 rounded-xl font-bold transition-colors duration-200 shadow-sm flex items-center justify-center gap-2 outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
 const styles = {
-  primary: "bg-indigo-600 hover:bg-indigo-500 text-white border border-indigo-700/50 hover:shadow-indigo-500/10",
-  secondary: "bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 hover:shadow-slate-800/20",
-  outline: "bg-transparent hover:bg-slate-800 text-slate-300 border border-slate-700 hover:text-white",
-  ghost: "bg-transparent hover:bg-slate-800/50 text-slate-400 hover:text-slate-200 border border-transparent"
+  primary: "bg-orange-500 hover:bg-orange-600 text-white border border-orange-500",
+  secondary: "bg-white hover:bg-orange-50 text-slate-800 hover:text-orange-600 border border-slate-200 hover:border-orange-300",
+  outline: "bg-white hover:bg-orange-50 text-orange-600 border border-orange-400 hover:border-orange-500",
+  ghost: "bg-transparent hover:bg-orange-50 text-slate-600 hover:text-orange-600 border border-transparent"
 }
 </script>
 

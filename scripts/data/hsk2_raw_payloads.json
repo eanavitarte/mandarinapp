@@ -1,0 +1,5320 @@
+[
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1136,
+          "word": "吧",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=ba",
+          "pinyin": "ba",
+          "pinyin_tone": "ba",
+          "pinyin_num": "ba5",
+          "translation": "[makes a suggestion, eg. \"Let's …\")]",
+          "full_translation": "",
+          "is_peg": 1,
+          "syntax": "助",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1137,
+          "word": "白",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=b%C3%A1i",
+          "pinyin": "bai",
+          "pinyin_tone": "bái",
+          "pinyin_num": "bai2",
+          "translation": "white",
+          "full_translation": "",
+          "is_peg": 1,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 35,
+              "level_id": 5,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK5"
+            }
+          ]
+        },
+        {
+          "id": 1138,
+          "word": "百",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=b%C7%8Ei",
+          "pinyin": "bai",
+          "pinyin_tone": "bǎi",
+          "pinyin_num": "bai3",
+          "translation": "hundred",
+          "full_translation": "",
+          "is_peg": 1,
+          "syntax": "数",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1139,
+          "word": "帮助",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%B8%AE%E5%8A%A9",
+          "pinyin": "bang zhu",
+          "pinyin_tone": "bāng zhù",
+          "pinyin_num": "bang1 zhu4",
+          "translation": "to help",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 33,
+              "level_id": 3,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK3"
+            }
+          ]
+        },
+        {
+          "id": 1140,
+          "word": "报纸",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%8A%A5%E7%BA%B8",
+          "pinyin": "bao zhi",
+          "pinyin_tone": "bào zhǐ",
+          "pinyin_num": "bao4 zhi3",
+          "translation": "newspaper",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 33,
+              "level_id": 3,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK3"
+            }
+          ]
+        },
+        {
+          "id": 1141,
+          "word": "比",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=b%C7%90",
+          "pinyin": "bi",
+          "pinyin_tone": "bǐ",
+          "pinyin_num": "bi3",
+          "translation": "to compare",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "介",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1142,
+          "word": "别",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=bi%C3%A9",
+          "pinyin": "bie",
+          "pinyin_tone": "bié",
+          "pinyin_num": "bie2",
+          "translation": "separate",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "副",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            },
+            {
+              "id": 35,
+              "level_id": 5,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK5"
+            }
+          ]
+        },
+        {
+          "id": 1305,
+          "word": "宾馆",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%AE%BE%E9%A6%86",
+          "pinyin": "bin guan",
+          "pinyin_tone": "bīn guǎn",
+          "pinyin_num": "bin1 guan3",
+          "translation": "guesthouse",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 33,
+              "level_id": 3,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK3"
+            }
+          ]
+        },
+        {
+          "id": 5662,
+          "word": "长",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=ch%C3%A1ng",
+          "pinyin": "chang",
+          "pinyin_tone": "cháng",
+          "pinyin_num": "chang2",
+          "translation": "long",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 3,
+              "level_id": 3,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK3"
+            },
+            {
+              "id": 7,
+              "level_id": 1,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT1"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            },
+            {
+              "id": 33,
+              "level_id": 3,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK3"
+            }
+          ]
+        },
+        {
+          "id": 1144,
+          "word": "唱歌",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%94%B1%E6%AD%8C",
+          "pinyin": "chang ge",
+          "pinyin_tone": "chàng gē",
+          "pinyin_num": "chang4 ge1",
+          "translation": "to sing; singing",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1145,
+          "word": "出",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=ch%C5%AB",
+          "pinyin": "chu",
+          "pinyin_tone": "chū",
+          "pinyin_num": "chu1",
+          "translation": "to go out",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1146,
+          "word": "穿",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=chu%C4%81n",
+          "pinyin": "chuan",
+          "pinyin_tone": "chuān",
+          "pinyin_num": "chuan1",
+          "translation": "to wear; to put on",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1148,
+          "word": "次",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=c%C3%AC",
+          "pinyin": "ci",
+          "pinyin_tone": "cì",
+          "pinyin_num": "ci4",
+          "translation": "time",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 2325,
+          "word": "从",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=c%C3%B3ng",
+          "pinyin": "cong",
+          "pinyin_tone": "cóng",
+          "pinyin_num": "cong2",
+          "translation": "from; follow; comply with",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "介",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1149,
+          "word": "错",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=cu%C3%B2",
+          "pinyin": "cuo",
+          "pinyin_tone": "cuò",
+          "pinyin_num": "cuo4",
+          "translation": "wrong",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1150,
+          "word": "打篮球",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%89%93%E7%AF%AE%E7%90%83",
+          "pinyin": "da lan qiu",
+          "pinyin_tone": "dǎ lán qiú",
+          "pinyin_num": "da3 lan2 qiu2",
+          "translation": "play basketball",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            }
+          ]
+        },
+        {
+          "id": 1151,
+          "word": "大家",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%A4%A7%E5%AE%B6",
+          "pinyin": "da jia",
+          "pinyin_tone": "dà jiā",
+          "pinyin_num": "da4 jia1",
+          "translation": "everybody",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1153,
+          "word": "到",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=d%C3%A0o",
+          "pinyin": "dao",
+          "pinyin_tone": "dào",
+          "pinyin_num": "dao4",
+          "translation": "to arrive; to get to",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 5663,
+          "word": "得",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=de",
+          "pinyin": "de",
+          "pinyin_tone": "de",
+          "pinyin_num": "de0",
+          "translation": "[particle to connect verb to adverb]",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "助",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 4,
+              "level_id": 4,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK4"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            },
+            {
+              "id": 33,
+              "level_id": 3,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK3"
+            }
+          ]
+        },
+        {
+          "id": 5664,
+          "word": "等",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=d%C4%9Bng",
+          "pinyin": "deng",
+          "pinyin_tone": "děng",
+          "pinyin_num": "deng3",
+          "translation": "wait",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 4,
+              "level_id": 4,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK4"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            },
+            {
+              "id": 34,
+              "level_id": 4,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK4"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1156,
+          "word": "弟弟",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%BC%9F%E5%BC%9F",
+          "pinyin": "di di",
+          "pinyin_tone": "dì di",
+          "pinyin_num": "di4 di5",
+          "translation": "younger brother",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1157,
+          "word": "第一",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E7%AC%AC%E4%B8%80",
+          "pinyin": "di yi",
+          "pinyin_tone": "dì yī",
+          "pinyin_num": "di4 yi1",
+          "translation": "firstly",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "数",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            }
+          ]
+        },
+        {
+          "id": 1158,
+          "word": "懂",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=d%C7%92ng",
+          "pinyin": "dong",
+          "pinyin_tone": "dǒng",
+          "pinyin_num": "dong3",
+          "translation": "to understand",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1159,
+          "word": "对",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=du%C3%AC",
+          "pinyin": "dui",
+          "pinyin_tone": "duì",
+          "pinyin_num": "dui4",
+          "translation": "correct; right",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "介/形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1160,
+          "word": "房间",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%88%BF%E9%97%B4",
+          "pinyin": "fang jian",
+          "pinyin_tone": "fáng jiān",
+          "pinyin_num": "fang2 jian1",
+          "translation": "room",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1161,
+          "word": "非常",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E9%9D%9E%E5%B8%B8",
+          "pinyin": "fei chang",
+          "pinyin_tone": "fēi cháng",
+          "pinyin_num": "fei1 chang2",
+          "translation": "extremely",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "副",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1162,
+          "word": "服务员",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%9C%8D%E5%8A%A1%E5%91%98",
+          "pinyin": "fu wu yuan",
+          "pinyin_tone": "fú wù yuán",
+          "pinyin_num": "fu2 wu4 yuan2",
+          "translation": "waiter/waitress; attendant",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            }
+          ]
+        },
+        {
+          "id": 1163,
+          "word": "高",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=g%C4%81o",
+          "pinyin": "gao",
+          "pinyin_tone": "gāo",
+          "pinyin_num": "gao1",
+          "translation": "high; tall",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 7,
+              "level_id": 1,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT1"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1164,
+          "word": "告诉",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%91%8A%E8%AF%89",
+          "pinyin": "gao su",
+          "pinyin_tone": "gào su",
+          "pinyin_num": "gao4 su5",
+          "translation": "to tell",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1165,
+          "word": "哥哥",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%93%A5%E5%93%A5",
+          "pinyin": "ge ge",
+          "pinyin_tone": "gē ge",
+          "pinyin_num": "ge1 ge5",
+          "translation": "elder brother",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 7,
+              "level_id": 1,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT1"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1166,
+          "word": "给",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=g%C4%9Bi",
+          "pinyin": "gei",
+          "pinyin_tone": "gěi",
+          "pinyin_num": "gei3",
+          "translation": "to give",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1167,
+          "word": "公共汽车",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%85%AC%E5%85%B1%E6%B1%BD%E8%BD%A6",
+          "pinyin": "gong gong qi che",
+          "pinyin_tone": "gōng gòng qì chē",
+          "pinyin_num": "gong1 gong4 qi4 che1",
+          "translation": "bus",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            }
+          ]
+        },
+        {
+          "id": 1169,
+          "word": "公司",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%85%AC%E5%8F%B8",
+          "pinyin": "gong si",
+          "pinyin_tone": "gōng sī",
+          "pinyin_num": "gong1 si1",
+          "translation": "company; office",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1170,
+          "word": "贵",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=gu%C3%AC",
+          "pinyin": "gui",
+          "pinyin_tone": "guì",
+          "pinyin_num": "gui4",
+          "translation": "expensive",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 5665,
+          "word": "过",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=gu%C3%B2",
+          "pinyin": "guo",
+          "pinyin_tone": "guò",
+          "pinyin_num": "guo4",
+          "translation": "[marker after a verb to indicate experience]",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "助",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 3,
+              "level_id": 3,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK3"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 5666,
+          "word": "还",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=h%C3%A1i",
+          "pinyin": "hai",
+          "pinyin_tone": "hái",
+          "pinyin_num": "hai2",
+          "translation": "even",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "副",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 3,
+              "level_id": 3,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK3"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            },
+            {
+              "id": 33,
+              "level_id": 3,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK3"
+            }
+          ]
+        },
+        {
+          "id": 1173,
+          "word": "孩子",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%AD%A9%E5%AD%90",
+          "pinyin": "hai zi",
+          "pinyin_tone": "hái zi",
+          "pinyin_num": "hai2 zi5",
+          "translation": "child; children",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1174,
+          "word": "好吃",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%A5%BD%E5%90%83",
+          "pinyin": "hao chi",
+          "pinyin_tone": "hǎo chī",
+          "pinyin_num": "hao3 chi1",
+          "translation": "delicious",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1176,
+          "word": "黑",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=h%C4%93i",
+          "pinyin": "hei",
+          "pinyin_tone": "hēi",
+          "pinyin_num": "hei1",
+          "translation": "black",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 35,
+              "level_id": 5,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK5"
+            }
+          ]
+        },
+        {
+          "id": 1177,
+          "word": "红",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=h%C3%B3ng",
+          "pinyin": "hong",
+          "pinyin_tone": "hóng",
+          "pinyin_num": "hong2",
+          "translation": "red",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 35,
+              "level_id": 5,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK5"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1029,
+          "word": "火车站",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E7%81%AB%E8%BD%A6%E7%AB%99",
+          "pinyin": "huo che zhan",
+          "pinyin_tone": "huǒ chē zhàn",
+          "pinyin_num": "huo3 che1 zhan4",
+          "translation": "railway station",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1180,
+          "word": "机场",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%9C%BA%E5%9C%BA",
+          "pinyin": "ji chang",
+          "pinyin_tone": "jī chǎng",
+          "pinyin_num": "ji1 chang3",
+          "translation": "airport",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1181,
+          "word": "鸡蛋",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E9%B8%A1%E8%9B%8B",
+          "pinyin": "ji dan",
+          "pinyin_tone": "jī dàn",
+          "pinyin_num": "ji1 dan4",
+          "translation": "(chicken) egg",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1182,
+          "word": "件",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=ji%C3%A0n",
+          "pinyin": "jian",
+          "pinyin_tone": "jiàn",
+          "pinyin_num": "jian4",
+          "translation": "item; [measure word for items of clothing]",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "量",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1183,
+          "word": "教室",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%95%99%E5%AE%A4",
+          "pinyin": "jiao shi",
+          "pinyin_tone": "jiào shì",
+          "pinyin_num": "jiao4 shi4",
+          "translation": "classroom",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1184,
+          "word": "姐姐",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%A7%90%E5%A7%90",
+          "pinyin": "jie jie",
+          "pinyin_tone": "jiě jie",
+          "pinyin_num": "jie3 jie5",
+          "translation": "elder sister",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 7,
+              "level_id": 1,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT1"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1185,
+          "word": "介绍",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E4%BB%8B%E7%BB%8D",
+          "pinyin": "jie shao",
+          "pinyin_tone": "jiè shào",
+          "pinyin_num": "jie4 shao4",
+          "translation": "introduce",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1407,
+          "word": "近",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=j%C3%ACn",
+          "pinyin": "jin",
+          "pinyin_tone": "jìn",
+          "pinyin_num": "jin4",
+          "translation": "near; close by",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1186,
+          "word": "进",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=j%C3%ACn",
+          "pinyin": "jin",
+          "pinyin_tone": "jìn",
+          "pinyin_num": "jin4",
+          "translation": "to enter",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1187,
+          "word": "就",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=ji%C3%B9",
+          "pinyin": "jiu",
+          "pinyin_tone": "jiù",
+          "pinyin_num": "jiu4",
+          "translation": "simply",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "副",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1188,
+          "word": "觉得",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E8%A7%89%E5%BE%97",
+          "pinyin": "jue de",
+          "pinyin_tone": "jué de",
+          "pinyin_num": "jue2 de5",
+          "translation": "to think; feel",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1189,
+          "word": "咖啡",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%92%96%E5%95%A1",
+          "pinyin": "ka fei",
+          "pinyin_tone": "kā fēi",
+          "pinyin_num": "ka1 fei1",
+          "translation": "coffee",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1190,
+          "word": "开始",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%BC%80%E5%A7%8B",
+          "pinyin": "kai shi",
+          "pinyin_tone": "kāi shǐ",
+          "pinyin_num": "kai1 shi3",
+          "translation": "to begin",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1191,
+          "word": "考试",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E8%80%83%E8%AF%95",
+          "pinyin": "kao shi",
+          "pinyin_tone": "kǎo shì",
+          "pinyin_num": "kao3 shi4",
+          "translation": "examination",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1192,
+          "word": "可能",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%8F%AF%E8%83%BD",
+          "pinyin": "ke neng",
+          "pinyin_tone": "kě néng",
+          "pinyin_num": "ke3 neng2",
+          "translation": "perhaps; possibly",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1193,
+          "word": "可以",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%8F%AF%E4%BB%A5",
+          "pinyin": "ke yi",
+          "pinyin_tone": "kě yǐ",
+          "pinyin_num": "ke3 yi3",
+          "translation": "can; may",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1194,
+          "word": "课",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=k%C3%A8",
+          "pinyin": "ke",
+          "pinyin_tone": "kè",
+          "pinyin_num": "ke4",
+          "translation": "lesson",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1195,
+          "word": "快",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=ku%C3%A0i",
+          "pinyin": "kuai",
+          "pinyin_tone": "kuài",
+          "pinyin_num": "kuai4",
+          "translation": "fast; quick",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1196,
+          "word": "快乐",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%BF%AB%E4%B9%90",
+          "pinyin": "kuai le",
+          "pinyin_tone": "kuài lè",
+          "pinyin_num": "kuai4 le4",
+          "translation": "happy",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 2761,
+          "word": "累",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=l%C3%A8i",
+          "pinyin": "lei",
+          "pinyin_tone": "lèi",
+          "pinyin_num": "lei4",
+          "translation": "tired",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1197,
+          "word": "离",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=l%C3%AD",
+          "pinyin": "li",
+          "pinyin_tone": "lí",
+          "pinyin_num": "li2",
+          "translation": "to be distant from; to leave",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1198,
+          "word": "两",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=li%C7%8Eng",
+          "pinyin": "liang",
+          "pinyin_tone": "liǎng",
+          "pinyin_num": "liang3",
+          "translation": "two (of something)",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "数",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            },
+            {
+              "id": 34,
+              "level_id": 4,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK4"
+            }
+          ]
+        },
+        {
+          "id": 1042,
+          "word": "零",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=l%C3%ADng",
+          "pinyin": "ling",
+          "pinyin_tone": "líng",
+          "pinyin_num": "ling2",
+          "translation": "zero",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "数",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1199,
+          "word": "路",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=l%C3%B9",
+          "pinyin": "lu",
+          "pinyin_tone": "lù",
+          "pinyin_num": "lu4",
+          "translation": "road; route; bus number",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1200,
+          "word": "旅游",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%97%85%E6%B8%B8",
+          "pinyin": "lv you",
+          "pinyin_tone": "lǚ yóu",
+          "pinyin_num": "lv3 you2",
+          "translation": "tourism",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1202,
+          "word": "卖",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=m%C3%A0i",
+          "pinyin": "mai",
+          "pinyin_tone": "mài",
+          "pinyin_num": "mai4",
+          "translation": "to sell",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1203,
+          "word": "慢",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=m%C3%A0n",
+          "pinyin": "man",
+          "pinyin_tone": "màn",
+          "pinyin_num": "man4",
+          "translation": "slow",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1204,
+          "word": "忙",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=m%C3%A1ng",
+          "pinyin": "mang",
+          "pinyin_tone": "máng",
+          "pinyin_num": "mang2",
+          "translation": "busy",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1205,
+          "word": "每",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=m%C4%9Bi",
+          "pinyin": "mei",
+          "pinyin_tone": "měi",
+          "pinyin_num": "mei3",
+          "translation": "every; each",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "代",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1206,
+          "word": "妹妹",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%A6%B9%E5%A6%B9",
+          "pinyin": "mei mei",
+          "pinyin_tone": "mèi mei",
+          "pinyin_num": "mei4 mei5",
+          "translation": "younger sister",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1207,
+          "word": "门",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=m%C3%A9n",
+          "pinyin": "men",
+          "pinyin_tone": "mén",
+          "pinyin_num": "men2",
+          "translation": "door",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1443,
+          "word": "面条",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E9%9D%A2%E6%9D%A1",
+          "pinyin": "mian tiao",
+          "pinyin_tone": "miàn tiáo",
+          "pinyin_num": "mian4 tiao2",
+          "translation": "noodles",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 7,
+              "level_id": 1,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT1"
+            }
+          ]
+        },
+        {
+          "id": 5667,
+          "word": "男",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=n%C3%A1n",
+          "pinyin": "nan",
+          "pinyin_tone": "nán",
+          "pinyin_num": "nan2",
+          "translation": "male",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "区别",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1209,
+          "word": "您",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=n%C3%ADn",
+          "pinyin": "nin",
+          "pinyin_tone": "nín",
+          "pinyin_num": "nin2",
+          "translation": "you [polite form]",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "代",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1210,
+          "word": "牛奶",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E7%89%9B%E5%A5%B6",
+          "pinyin": "niu nai",
+          "pinyin_tone": "niú nǎi",
+          "pinyin_num": "niu2 nai3",
+          "translation": "milk",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 7,
+              "level_id": 1,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT1"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 5668,
+          "word": "女",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=n%C7%9A",
+          "pinyin": "nv",
+          "pinyin_tone": "nǚ",
+          "pinyin_num": "nv3",
+          "translation": "female",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "区别",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1212,
+          "word": "旁边",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%97%81%E8%BE%B9",
+          "pinyin": "pang bian",
+          "pinyin_tone": "páng biān",
+          "pinyin_num": "pang2 bian1",
+          "translation": "next to",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1213,
+          "word": "跑步",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E8%B7%91%E6%AD%A5",
+          "pinyin": "pao bu",
+          "pinyin_tone": "pǎo bù",
+          "pinyin_num": "pao3 bu4",
+          "translation": "running; jogging",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1214,
+          "word": "便宜",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E4%BE%BF%E5%AE%9C",
+          "pinyin": "pian yi",
+          "pinyin_tone": "pián yi",
+          "pinyin_num": "pian2 yi5",
+          "translation": "cheap",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1215,
+          "word": "票",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=pi%C3%A0o",
+          "pinyin": "piao",
+          "pinyin_tone": "piào",
+          "pinyin_num": "piao4",
+          "translation": "ticket",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1216,
+          "word": "妻子",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%A6%BB%E5%AD%90",
+          "pinyin": "qi zi",
+          "pinyin_tone": "qī zi",
+          "pinyin_num": "qi1 zi5",
+          "translation": "wife",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1217,
+          "word": "起床",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E8%B5%B7%E5%BA%8A",
+          "pinyin": "qi chuang",
+          "pinyin_tone": "qǐ chuáng",
+          "pinyin_num": "qi3 chuang2",
+          "translation": "get up (out of bed)",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1218,
+          "word": "千",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=qi%C4%81n",
+          "pinyin": "qian",
+          "pinyin_tone": "qiān",
+          "pinyin_num": "qian1",
+          "translation": "thousand",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "数",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1464,
+          "word": "铅笔",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E9%93%85%E7%AC%94",
+          "pinyin": "qian bi",
+          "pinyin_tone": "qiān bǐ",
+          "pinyin_num": "qian1 bi3",
+          "translation": "pencil",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 33,
+              "level_id": 3,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK3"
+            }
+          ]
+        },
+        {
+          "id": 1219,
+          "word": "晴",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=q%C3%ADng",
+          "pinyin": "qing",
+          "pinyin_tone": "qíng",
+          "pinyin_num": "qing2",
+          "translation": "fine; sunny",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1220,
+          "word": "去年",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%8E%BB%E5%B9%B4",
+          "pinyin": "qu nian",
+          "pinyin_tone": "qù nián",
+          "pinyin_num": "qu4 nian2",
+          "translation": "last year",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1221,
+          "word": "让",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=r%C3%A0ng",
+          "pinyin": "rang",
+          "pinyin_tone": "ràng",
+          "pinyin_num": "rang4",
+          "translation": "to let; allow",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1073,
+          "word": "日",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=r%C3%AC",
+          "pinyin": "ri",
+          "pinyin_tone": "rì",
+          "pinyin_num": "ri4",
+          "translation": "day [date]; sun",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "量",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1222,
+          "word": "上班",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E4%B8%8A%E7%8F%AD",
+          "pinyin": "shang ban",
+          "pinyin_tone": "shàng bān",
+          "pinyin_num": "shang4 ban1",
+          "translation": "start work",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1223,
+          "word": "身体",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E8%BA%AB%E4%BD%93",
+          "pinyin": "shen ti",
+          "pinyin_tone": "shēn tǐ",
+          "pinyin_num": "shen1 ti3",
+          "translation": "body; health",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1224,
+          "word": "生病",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E7%94%9F%E7%97%85",
+          "pinyin": "sheng bing",
+          "pinyin_tone": "shēng bìng",
+          "pinyin_num": "sheng1 bing4",
+          "translation": "ill; sick; unwell",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1225,
+          "word": "生日",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E7%94%9F%E6%97%A5",
+          "pinyin": "sheng ri",
+          "pinyin_tone": "shēng rì",
+          "pinyin_num": "sheng1 ri4",
+          "translation": "birthday",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1226,
+          "word": "时间",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%97%B6%E9%97%B4",
+          "pinyin": "shi jian",
+          "pinyin_tone": "shí jiān",
+          "pinyin_num": "shi2 jian1",
+          "translation": "time",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 3045,
+          "word": "事情",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E4%BA%8B%E6%83%85",
+          "pinyin": "shi qing",
+          "pinyin_tone": "shì qing",
+          "pinyin_num": "shi4 qing5",
+          "translation": "matter; affair; thing",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1227,
+          "word": "手表",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%89%8B%E8%A1%A8",
+          "pinyin": "shou biao",
+          "pinyin_tone": "shǒu biǎo",
+          "pinyin_num": "shou3 biao3",
+          "translation": "watch",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1228,
+          "word": "手机",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%89%8B%E6%9C%BA",
+          "pinyin": "shou ji",
+          "pinyin_tone": "shǒu jī",
+          "pinyin_num": "shou3 ji1",
+          "translation": "mobile phone",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1086,
+          "word": "说话",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E8%AF%B4%E8%AF%9D",
+          "pinyin": "shuo hua",
+          "pinyin_tone": "shuō huà",
+          "pinyin_num": "shuo1 hua4",
+          "translation": "speak",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1230,
+          "word": "送",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=s%C3%B2ng",
+          "pinyin": "song",
+          "pinyin_tone": "sòng",
+          "pinyin_num": "song4",
+          "translation": "to give (present); deliver; see someone off",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 5669,
+          "word": "虽然……但是……",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E8%99%BD%E7%84%B6%E2%80%A6%E2%80%A6%E4%BD%86%E6%98%AF%E2%80%A6%E2%80%A6",
+          "pinyin": "sui ran dan shi",
+          "pinyin_tone": "suī rán ……dàn shì …… ",
+          "pinyin_num": "sui1 ran2 dan4 shi4",
+          "translation": "although",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "关联",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1232,
+          "word": "它",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=t%C4%81",
+          "pinyin": "ta",
+          "pinyin_tone": "tā",
+          "pinyin_num": "ta1",
+          "translation": "it",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "代",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1233,
+          "word": "踢足球",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E8%B8%A2%E8%B6%B3%E7%90%83",
+          "pinyin": "ti zu qiu",
+          "pinyin_tone": "tī zú qiú",
+          "pinyin_num": "ti1 zu2 qiu2",
+          "translation": "play football",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            }
+          ]
+        },
+        {
+          "id": 1234,
+          "word": "题",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=t%C3%AD",
+          "pinyin": "ti",
+          "pinyin_tone": "tí",
+          "pinyin_num": "ti2",
+          "translation": "question",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1235,
+          "word": "跳舞",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E8%B7%B3%E8%88%9E",
+          "pinyin": "tiao wu",
+          "pinyin_tone": "tiào wǔ",
+          "pinyin_num": "tiao4 wu3",
+          "translation": "to dance",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1236,
+          "word": "外",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=w%C3%A0i",
+          "pinyin": "wai",
+          "pinyin_tone": "wài",
+          "pinyin_num": "wai4",
+          "translation": "outside",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1237,
+          "word": "完",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=w%C3%A1n",
+          "pinyin": "wan",
+          "pinyin_tone": "wán",
+          "pinyin_num": "wan2",
+          "translation": "to finish; [+ verb indicates completion]",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1238,
+          "word": "玩",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=w%C3%A1n",
+          "pinyin": "wan",
+          "pinyin_tone": "wán",
+          "pinyin_num": "wan2",
+          "translation": "to play",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1239,
+          "word": "晚上",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%99%9A%E4%B8%8A",
+          "pinyin": "wan shang",
+          "pinyin_tone": "wǎn shang",
+          "pinyin_num": "wan3 shang5",
+          "translation": "evening",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 2009,
+          "word": "往",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=w%C7%8Eng",
+          "pinyin": "wang",
+          "pinyin_tone": "wǎng",
+          "pinyin_num": "wang3",
+          "translation": "towards",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "介",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1240,
+          "word": "为什么",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E4%B8%BA%E4%BB%80%E4%B9%88",
+          "pinyin": "wei shen me",
+          "pinyin_tone": "wèi shén me",
+          "pinyin_num": "wei4 shen2 me5",
+          "translation": "why?",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1241,
+          "word": "问",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=w%C3%A8n",
+          "pinyin": "wen",
+          "pinyin_tone": "wèn",
+          "pinyin_num": "wen4",
+          "translation": "to ask",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1242,
+          "word": "问题",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E9%97%AE%E9%A2%98",
+          "pinyin": "wen ti",
+          "pinyin_tone": "wèn tí",
+          "pinyin_num": "wen4 ti2",
+          "translation": "problem",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1243,
+          "word": "西瓜",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E8%A5%BF%E7%93%9C",
+          "pinyin": "xi gua",
+          "pinyin_tone": "xī guā",
+          "pinyin_num": "xi1 gua1",
+          "translation": "watermelon",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 33,
+              "level_id": 3,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK3"
+            }
+          ]
+        },
+        {
+          "id": 1244,
+          "word": "希望",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%B8%8C%E6%9C%9B",
+          "pinyin": "xi wang",
+          "pinyin_tone": "xī wàng",
+          "pinyin_num": "xi1 wang4",
+          "translation": "hope; wish",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1245,
+          "word": "洗",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=x%C7%90",
+          "pinyin": "xi",
+          "pinyin_tone": "xǐ",
+          "pinyin_num": "xi3",
+          "translation": "to wash",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1246,
+          "word": "小时",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%B0%8F%E6%97%B6",
+          "pinyin": "xiao shi",
+          "pinyin_tone": "xiǎo shí",
+          "pinyin_num": "xiao3 shi2",
+          "translation": "hour",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1247,
+          "word": "笑",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=xi%C3%A0o",
+          "pinyin": "xiao",
+          "pinyin_tone": "xiào",
+          "pinyin_num": "xiao4",
+          "translation": "to laugh; smile",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1248,
+          "word": "新",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=x%C4%ABn",
+          "pinyin": "xin",
+          "pinyin_tone": "xīn",
+          "pinyin_num": "xin1",
+          "translation": "new",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1249,
+          "word": "姓",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=x%C3%ACng",
+          "pinyin": "xing",
+          "pinyin_tone": "xìng",
+          "pinyin_num": "xing4",
+          "translation": "surname",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1250,
+          "word": "休息",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E4%BC%91%E6%81%AF",
+          "pinyin": "xiu xi",
+          "pinyin_tone": "xiū xi",
+          "pinyin_num": "xiu1 xi5",
+          "translation": "to rest",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1251,
+          "word": "雪",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=xu%C4%9B",
+          "pinyin": "xue",
+          "pinyin_tone": "xuě",
+          "pinyin_num": "xue3",
+          "translation": "snow",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1252,
+          "word": "颜色",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E9%A2%9C%E8%89%B2",
+          "pinyin": "yan se",
+          "pinyin_tone": "yán sè",
+          "pinyin_num": "yan2 se4",
+          "translation": "colour",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1253,
+          "word": "眼睛",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E7%9C%BC%E7%9D%9B",
+          "pinyin": "yan jing",
+          "pinyin_tone": "yǎn jing",
+          "pinyin_num": "yan3 jing5",
+          "translation": "eye",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 7,
+              "level_id": 1,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT1"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1254,
+          "word": "羊肉",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E7%BE%8A%E8%82%89",
+          "pinyin": "yang rou",
+          "pinyin_tone": "yáng ròu",
+          "pinyin_num": "yang2 rou4",
+          "translation": "mutton",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            }
+          ]
+        },
+        {
+          "id": 1255,
+          "word": "要",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=y%C3%A0o",
+          "pinyin": "yao",
+          "pinyin_tone": "yào",
+          "pinyin_num": "yao4",
+          "translation": "want; be going to; ask for; demand",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1256,
+          "word": "药",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=y%C3%A0o",
+          "pinyin": "yao",
+          "pinyin_tone": "yào",
+          "pinyin_num": "yao4",
+          "translation": "medicine",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1257,
+          "word": "也",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=y%C4%9B",
+          "pinyin": "ye",
+          "pinyin_tone": "yě",
+          "pinyin_num": "ye3",
+          "translation": "too; also",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "副",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 5670,
+          "word": "一下",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E4%B8%80%E4%B8%8B",
+          "pinyin": "yi xia",
+          "pinyin_tone": "yī xià",
+          "pinyin_num": "yi1 xia4",
+          "translation": "[used after a verb] give something a go",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "数量",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1258,
+          "word": "已经",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%B7%B2%E7%BB%8F",
+          "pinyin": "yi jing",
+          "pinyin_tone": "yǐ jīng",
+          "pinyin_num": "yi3 jing1",
+          "translation": "already",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "副",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1259,
+          "word": "一起",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E4%B8%80%E8%B5%B7",
+          "pinyin": "yi qi",
+          "pinyin_tone": "yì qǐ",
+          "pinyin_num": "yi4 qi3",
+          "translation": "together",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "副",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1260,
+          "word": "意思",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%84%8F%E6%80%9D",
+          "pinyin": "yi si",
+          "pinyin_tone": "yì si",
+          "pinyin_num": "yi4 si5",
+          "translation": "meaning",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1261,
+          "word": "阴",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=y%C4%ABn",
+          "pinyin": "yin",
+          "pinyin_tone": "yīn",
+          "pinyin_num": "yin1",
+          "translation": "cloudy",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 5671,
+          "word": "因为……所以……",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%9B%A0%E4%B8%BA%E2%80%A6%E2%80%A6%E6%89%80%E4%BB%A5%E2%80%A6%E2%80%A6",
+          "pinyin": "yin wei suo yi",
+          "pinyin_tone": "yīn wèi ……suǒ yǐ ……",
+          "pinyin_num": "yin1 wei4 suo3 yi3",
+          "translation": "because",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "关联",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1263,
+          "word": "游泳",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%B8%B8%E6%B3%B3",
+          "pinyin": "you yong",
+          "pinyin_tone": "yóu yǒng",
+          "pinyin_num": "you2 yong3",
+          "translation": "swimming",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1264,
+          "word": "右边",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%8F%B3%E8%BE%B9",
+          "pinyin": "you bian",
+          "pinyin_tone": "yòu bian",
+          "pinyin_num": "you4 bian5",
+          "translation": "on the right",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1265,
+          "word": "鱼",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=y%C3%BA",
+          "pinyin": "yu",
+          "pinyin_tone": "yú",
+          "pinyin_num": "yu2",
+          "translation": "fish",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 7,
+              "level_id": 1,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT1"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1267,
+          "word": "远",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=yu%C7%8En",
+          "pinyin": "yuan",
+          "pinyin_tone": "yuǎn",
+          "pinyin_num": "yuan3",
+          "translation": "far",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "形",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1268,
+          "word": "运动",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E8%BF%90%E5%8A%A8",
+          "pinyin": "yun dong",
+          "pinyin_tone": "yùn dòng",
+          "pinyin_num": "yun4 dong4",
+          "translation": "sport",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动/名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1269,
+          "word": "再",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=z%C3%A0i",
+          "pinyin": "zai",
+          "pinyin_tone": "zài",
+          "pinyin_num": "zai4",
+          "translation": "again",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "副",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1270,
+          "word": "早上",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%97%A9%E4%B8%8A",
+          "pinyin": "zao shang",
+          "pinyin_tone": "zǎo shang",
+          "pinyin_num": "zao3 shang5",
+          "translation": "early morning",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1272,
+          "word": "丈夫",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E4%B8%88%E5%A4%AB",
+          "pinyin": "zhang fu",
+          "pinyin_tone": "zhàng fu",
+          "pinyin_num": "zhang4 fu5",
+          "translation": "husband",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "errcode": 0,
+    "errmsg": "Operación exitosa",
+    "data": {
+      "level_count": 150,
+      "total_count": 150,
+      "page_count": 15,
+      "display_count": 10,
+      "list": [
+        {
+          "id": 1273,
+          "word": "找",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=zh%C7%8Eo",
+          "pinyin": "zhao",
+          "pinyin_tone": "zhǎo",
+          "pinyin_num": "zhao3",
+          "translation": "to find; to look for",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1274,
+          "word": "着",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=zhe",
+          "pinyin": "zhe",
+          "pinyin_tone": "zhe",
+          "pinyin_num": "zhe5",
+          "translation": "-ing",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "助",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            },
+            {
+              "id": 34,
+              "level_id": 4,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK4"
+            }
+          ]
+        },
+        {
+          "id": 1275,
+          "word": "真",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=zh%C4%93n",
+          "pinyin": "zhen",
+          "pinyin_tone": "zhēn",
+          "pinyin_num": "zhen1",
+          "translation": "real; so (+adjective)",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "副",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1276,
+          "word": "正在",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E6%AD%A3%E5%9C%A8",
+          "pinyin": "zheng zai",
+          "pinyin_tone": "zhèng zài",
+          "pinyin_num": "zheng4 zai4",
+          "translation": "to be in the process of",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "副",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 5672,
+          "word": "只",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=zh%C4%AB",
+          "pinyin": "zhi",
+          "pinyin_tone": "zhī",
+          "pinyin_num": "zhi1",
+          "translation": "individual [measure word for small animals]",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "量",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 3,
+              "level_id": 3,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK3"
+            },
+            {
+              "id": 9,
+              "level_id": 2,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT2"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            },
+            {
+              "id": 33,
+              "level_id": 3,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK3"
+            }
+          ]
+        },
+        {
+          "id": 3395,
+          "word": "知道",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E7%9F%A5%E9%81%93",
+          "pinyin": "zhi dao",
+          "pinyin_tone": "zhī dào",
+          "pinyin_num": "zhi1 dao4",
+          "translation": "know; realise; be aware of",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 31,
+              "level_id": 1,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK1"
+            }
+          ]
+        },
+        {
+          "id": 1277,
+          "word": "准备",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%87%86%E5%A4%87",
+          "pinyin": "zhun bei",
+          "pinyin_tone": "zhǔn bèi",
+          "pinyin_num": "zhun3 bei4",
+          "translation": "to prepare",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 11,
+              "level_id": 4,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT4"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1279,
+          "word": "走",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=z%C7%92u",
+          "pinyin": "zou",
+          "pinyin_tone": "zǒu",
+          "pinyin_num": "zou3",
+          "translation": "go; walk",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "动",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1280,
+          "word": "最",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=zu%C3%AC",
+          "pinyin": "zui",
+          "pinyin_tone": "zuì",
+          "pinyin_num": "zui4",
+          "translation": "most",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "副",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 10,
+              "level_id": 3,
+              "level_type": 3,
+              "type_name": "YCT",
+              "level_name": "YCT3"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        },
+        {
+          "id": 1281,
+          "word": "左边",
+          "tts_url": "https://api.wohuimandarin.com/nls/tts?text=%E5%B7%A6%E8%BE%B9",
+          "pinyin": "zuo bian",
+          "pinyin_tone": "zuǒ bian",
+          "pinyin_num": "zuo3 bian5",
+          "translation": "on the left",
+          "full_translation": "",
+          "is_peg": 0,
+          "syntax": "名",
+          "levels": [
+            {
+              "id": 2,
+              "level_id": 2,
+              "level_type": 1,
+              "type_name": "HSK",
+              "level_name": "HSK2"
+            },
+            {
+              "id": 32,
+              "level_id": 2,
+              "level_type": 4,
+              "type_name": "New-HSK",
+              "level_name": "New HSK2"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

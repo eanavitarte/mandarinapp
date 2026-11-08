@@ -8,14 +8,14 @@
   height: 6px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.3);
+  background: rgba(255, 237, 213, 0.4);
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(99, 102, 241, 0.3);
+  background: rgba(249, 115, 22, 0.35);
   border-radius: 4px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(99, 102, 241, 0.5);
+  background: rgba(249, 115, 22, 0.6);
 }
 
 @keyframes slide-up {
@@ -44,4 +44,15 @@
 
 .animate-fade-in {
   animation: fade-in 0.3s ease-out both;
+}
+
+/* Tone 4 Sky Blue utility fallback for instant HMR */
+.text-sky-600 {
+  color: #0284C7;
+}
+.hover\:border-sky-500:hover {
+  border-color: #0EA5E9;
+}
+.hover\:bg-sky-50:hover {
+  background-color: #F0F9FF;
 }

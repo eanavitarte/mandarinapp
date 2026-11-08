@@ -5,11 +5,27 @@ import { GameState } from '~/types'
 
 // Composables
 const {
+  decks,
+  activeDeckId,
+  activeDeck: currentActiveDeck,
+  activeLanguage,
+  currentLanguageDecks,
+  currentLanguageCards,
+  sessionCards,
+  selectedReviewDeckIds,
+  setSelectedReviewDeckIds,
+  sessionScopeDescription,
+  currentDeckCards,
   deck,
   stories,
   isSyncing,
   isDbActive,
   loadData,
+  createDeck,
+  editDeck,
+  deleteDeck,
+  setActiveDeck,
+  setActiveLanguage,
   addCard,
   editCard,
   deleteCard,
@@ -21,6 +37,27 @@ const {
 } = useDeck()
 
 const { playCorrect, playWrong } = useAudio()
+const { stripToneMarks, extractCardTones, getSyllableDistractors, TONE_LABELS } = usePinyin()
+const {
+  streak,
+  activeStreak,
+  isStudiedToday,
+  dailyWordGoal,
+  todayUniqueWordsCount,
+  todayCorrectUniqueWordsCount,
+  yesterdayUniqueWordsCount,
+  todaySessionsCount,
+  yesterdaySessionsCount,
+  dailyGoalProgress,
+  isDailyGoalMet,
+  todayStartingMastery,
+  initDailyStartingMastery,
+  setDailyWordGoal,
+  seedTodayWordsFromCards,
+  loadMetrics,
+  recordAnswers,
+  recordCompletedSession
+} = useMetrics()
 
 // Local storage helper
 const getLocalStorageItem = (key: string, defaultValue: any) => {
@@ -67,15 +104,18 @@ watch(roundLength, (val) => setLocalStorageItem('round_length', val))
 watch(reviewRatio, (val) => setLocalStorageItem('review_ratio', val))
 
 // Game States
-type ViewState = 'LANDING' | 'GAME' | 'LIST' | 'STORIES'
-type QuizPhase = 'DEFINITION' | 'PINYIN'
+type ViewState = 'LANDING' | 'GAME' | 'LIST' | 'STORIES' | 'REINFORCE'
+type QuizPhase = 'DEFINITION' | 'TONE' | 'PINYIN'
 
 const view = ref<ViewState>('LANDING')
 const phase = ref<QuizPhase>('DEFINITION')
+const toneCharIndex = ref(0)
+const pinyinCharIndex = ref(0)
 const score = ref(0)
 const mistakes = ref(0)
 const currentCardIndex = ref(0)
 const cardsPlayedInRound = ref(0)
+const roundFailedCards = ref<Flashcard[]>([])
 
 const activeDeck = ref<Flashcard[]>([])
 const selectedOptionIndex = ref<number | null>(null)
@@ -89,30 +129,39 @@ const isExpanding = ref(false)
 const showSettings = ref(false)
 const showCloudPanel = ref(false)
 const showImportModal = ref(false)
+const showDeckManagerModal = ref(false)
 const showRoundOver = ref(false)
+const showFeedbackModal = ref(false)
+const showMetricsModal = ref(false)
+const failedCard = ref<Flashcard | null>(null)
+const failedPhase = ref<QuizPhase>('DEFINITION')
 
 // Selectors
 const dueCardsCount = computed(() => {
   const now = Date.now();
-  return deck.value.filter(c => {
+  return currentDeckCards.value.filter(c => {
     if (!c.srsNextDueDate) return true;
     return new Date(c.srsNextDueDate).getTime() <= now;
   }).length;
 })
 
+const failedCardsCount = computed(() => {
+  return currentDeckCards.value.filter(c => (c.wrongCount || 0) > 0).length;
+})
+
 const masteredCardsCount = computed(() => {
-  return deck.value.filter(c => c.knowledgeStatus === 100).length;
+  return currentDeckCards.value.filter(c => c.knowledgeStatus === 100).length;
 })
 
 const averageMastery = computed(() => {
-  if (deck.value.length === 0) return 0;
-  const sum = deck.value.reduce((acc, c) => acc + (c.knowledgeStatus || 0), 0);
-  return Math.round(sum / deck.value.length);
+  if (currentDeckCards.value.length === 0) return 0;
+  const sum = currentDeckCards.value.reduce((acc, c) => acc + (c.knowledgeStatus || 0), 0);
+  return Math.round(sum / currentDeckCards.value.length);
 })
 
 const allCategories = computed(() => {
   const cats = new Set<string>()
-  deck.value.forEach(c => {
+  currentDeckCards.value.forEach(c => {
     if (c.category) {
       c.category.split(',').forEach(cat => {
         const trimmed = cat.trim()
@@ -123,6 +172,12 @@ const allCategories = computed(() => {
   return Array.from(cats).sort()
 })
 
+const handleBatchImport = async (cards: Flashcard[], targetDeckId?: string) => {
+  await batchAddCards(cards, targetDeckId);
+  showImportModal.value = false;
+  alert(`¡Se importaron ${cards.length} tarjetas con éxito!`);
+}
+
 const progress = computed(() => {
   if (activeDeck.value.length === 0) return 100;
   return Math.round((currentCardIndex.value / activeDeck.value.length) * 100);
@@ -131,6 +186,11 @@ const progress = computed(() => {
 // Current game card
 const currentCard = computed(() => {
   return activeDeck.value[currentCardIndex.value] || activeDeck.value[0] || null;
+})
+
+const currentCardTones = computed(() => {
+  if (!currentCard.value) return [];
+  return extractCardTones(currentCard.value.hanzi, currentCard.value.pinyin);
 })
 
 // Multiple Choice Shuffler helper
@@ -146,8 +206,46 @@ function shuffle<T>(array: T[]): T[] {
 // Current options
 const currentOptions = computed<QuizOption[]>(() => {
   if (!currentCard.value || deck.value.length < 4) return [];
+
+  if (phase.value === 'TONE') {
+    const targetTone = currentCardTones.value[toneCharIndex.value]?.tone || 1;
+    const distractorTones = shuffle([1, 2, 3, 4, 5].filter(t => t !== targetTone)).slice(0, 3);
+    const selectedTones = [targetTone, ...distractorTones].sort((a, b) => a - b);
+
+    return selectedTones.map((toneNum) => ({
+      definition: TONE_LABELS[toneNum] || `${toneNum}° Tono`,
+      isCorrect: toneNum === targetTone,
+      originalCard: currentCard.value!,
+      tone: toneNum
+    }));
+  }
+
+  if (phase.value === 'PINYIN') {
+    if (currentCardTones.value.length > 0 && currentCard.value.type !== 'sentence') {
+      const targetCharObj = currentCardTones.value[pinyinCharIndex.value];
+      const targetSyllable = (targetCharObj?.cleanSyllable || stripToneMarks(targetCharObj?.syllable) || '').toLowerCase();
+
+      const correctOption: QuizOption = {
+        definition: targetSyllable || "???",
+        isCorrect: true,
+        originalCard: currentCard.value
+      };
+
+      const distractorSyllables = getSyllableDistractors(targetSyllable, currentLanguageCards.value, 3);
+      const distractorOptions: QuizOption[] = distractorSyllables.map((syl) => ({
+        definition: syl,
+        isCorrect: false,
+        originalCard: currentCard.value!
+      }));
+
+      return shuffle([correctOption, ...distractorOptions]);
+    }
+  }
+
   const isPinyinPhase = phase.value === 'PINYIN';
-  const targetValue = isPinyinPhase ? currentCard.value.pinyin : currentCard.value.definition;
+  const targetValue = isPinyinPhase
+    ? stripToneMarks(currentCard.value.pinyin)
+    : currentCard.value.definition;
   
   const correctOption: QuizOption = {
     definition: targetValue || "???",
@@ -155,10 +253,17 @@ const currentOptions = computed<QuizOption[]>(() => {
     originalCard: currentCard.value
   };
 
-  const distractorsPool = deck.value.filter(c => c._originalIndex !== currentCard.value?._originalIndex);
+  const distractorsPool = currentLanguageCards.value.filter(c => {
+    if (c._originalIndex === currentCard.value?._originalIndex) return false;
+    if (isPinyinPhase) {
+      return stripToneMarks(c.pinyin) !== targetValue;
+    }
+    return c.definition !== targetValue;
+  });
+
   const shuffledDistractors = shuffle(distractorsPool).slice(0, 3);
   const distractorOptions: QuizOption[] = shuffledDistractors.map((d: Flashcard) => ({
-      definition: (isPinyinPhase ? d.pinyin : d.definition) || "???",
+      definition: (isPinyinPhase ? stripToneMarks(d.pinyin) : d.definition) || "???",
       isCorrect: false,
       originalCard: d
   }));
@@ -169,18 +274,29 @@ const currentOptions = computed<QuizOption[]>(() => {
 const isDataLoading = ref(true)
 onMounted(async () => {
   isDataLoading.value = true;
-  await loadData();
+  await Promise.all([loadData(), loadMetrics()]);
+  seedTodayWordsFromCards(deck.value, activeLanguage.value);
+  if (averageMastery.value > 0) {
+    await initDailyStartingMastery(averageMastery.value, activeLanguage.value);
+  }
   isDataLoading.value = false;
+})
+
+watch(averageMastery, (val) => {
+  if (val > 0 && !isDataLoading.value) {
+    initDailyStartingMastery(val, activeLanguage.value);
+  }
 })
 
 // Round Generator
 const generateRoundDeck = () => {
-  if (deck.value.length === 0) {
+  roundFailedCards.value = [];
+  if (sessionCards.value.length === 0) {
     activeDeck.value = [];
     return;
   }
 
-  let filtered = deck.value;
+  let filtered = sessionCards.value;
   if (hskFilters.value.length > 0) {
     filtered = filtered.filter(c => hskFilters.value.includes(c.hskLevel || 1));
   }
@@ -239,7 +355,24 @@ const generateRoundDeck = () => {
   activeDeck.value = isRandomOrder.value ? shuffle(combinedDeck) : combinedDeck;
   currentCardIndex.value = 0;
   cardsPlayedInRound.value = 0;
+  phase.value = 'DEFINITION';
+  toneCharIndex.value = 0;
+  pinyinCharIndex.value = 0;
 }
+
+// Helper to log metrics and streak progress
+const logCardResult = async (card: Flashcard, isCorrect: boolean) => {
+  const cardDeckId = card.deckId || activeDeckId.value || 'mandarin-general';
+  const targetDeck = decks.value.find(d => d.id === cardDeckId);
+  const lang = targetDeck?.language || activeLanguage.value || 'zh';
+  await recordAnswers([{
+    deckId: cardDeckId,
+    language: lang,
+    correct: isCorrect ? 1 : 0,
+    wrong: isCorrect ? 0 : 1,
+    wordId: card.id || card.hanzi
+  }]);
+};
 
 // Option selection handler
 const handleOptionClick = (option: QuizOption, index: number) => {
@@ -258,7 +391,9 @@ const handleOptionClick = (option: QuizOption, index: number) => {
 
   setTimeout(async () => {
       const hasPinyin = !!currentCard.value.pinyin;
-      const cardFinishedCorrectly = isCorrect && (phase.value === 'PINYIN' || !hasPinyin);
+      const hasTones = hasPinyin && currentCard.value.type !== 'sentence' && currentCardTones.value.length > 0;
+      const isLastPinyinChar = !hasTones || pinyinCharIndex.value + 1 >= currentCardTones.value.length;
+      const cardFinishedCorrectly = isCorrect && (phase.value === 'PINYIN' ? isLastPinyinChar : !hasPinyin);
 
       // Track modified card index
       if (currentCard.value._originalIndex !== undefined) {
@@ -281,39 +416,124 @@ const handleOptionClick = (option: QuizOption, index: number) => {
       deck.value = nextDeck;
 
       if (isCorrect) {
-          if (phase.value === 'DEFINITION' && hasPinyin) {
-              phase.value = 'PINYIN';
+          if (phase.value === 'DEFINITION') {
+              if (hasTones) {
+                  phase.value = 'TONE';
+                  toneCharIndex.value = 0;
+              } else if (hasPinyin) {
+                  phase.value = 'PINYIN';
+                  pinyinCharIndex.value = 0;
+              } else {
+                  score.value += 1;
+                  phase.value = 'DEFINITION';
+                  toneCharIndex.value = 0;
+                  pinyinCharIndex.value = 0;
+                  currentCardIndex.value += 1;
+              }
+          } else if (phase.value === 'TONE') {
+              if (toneCharIndex.value + 1 < currentCardTones.value.length) {
+                  toneCharIndex.value += 1;
+              } else {
+                  phase.value = 'PINYIN';
+                  toneCharIndex.value = 0;
+                  pinyinCharIndex.value = 0;
+              }
           } else {
-              score.value += 1;
-              phase.value = 'DEFINITION'; 
-              currentCardIndex.value += 1;
-          }
-      } else {
-          mistakes.value += 1;
-          phase.value = 'DEFINITION';
-          currentCardIndex.value += 1;
-      }
-
-      if (cardFinishedCorrectly || !isCorrect) {
-          const nextRoundCount = cardsPlayedInRound.value + 1;
-          cardsPlayedInRound.value = nextRoundCount;
-
-          if (nextRoundCount >= activeDeck.value.length) {
-              showRoundOver.value = true;
-              if (isDbActive.value) {
-                // Pass only cards modified in this session
-                const practicedCards = nextDeck.filter(c => 
-                  c._originalIndex !== undefined && modifiedIndices.value.has(c._originalIndex)
-                );
-                await syncStats(practicedCards);
+              // phase.value === 'PINYIN'
+              if (hasTones && pinyinCharIndex.value + 1 < currentCardTones.value.length) {
+                  pinyinCharIndex.value += 1;
+              } else {
+                  score.value += 1;
+                  phase.value = 'DEFINITION'; 
+                  toneCharIndex.value = 0;
+                  pinyinCharIndex.value = 0;
+                  currentCardIndex.value += 1;
               }
           }
-      }
 
-      isTransitioning.value = false;
-      selectedOptionIndex.value = null;
-      clickLock.value = false;
+          if (cardFinishedCorrectly) {
+              // Log hit into daily metrics & update streak
+              if (currentCard.value) {
+                await logCardResult(currentCard.value, true);
+              }
+
+              const nextRoundCount = cardsPlayedInRound.value + 1;
+              cardsPlayedInRound.value = nextRoundCount;
+
+              if (nextRoundCount >= activeDeck.value.length) {
+                  showRoundOver.value = true;
+                  const primaryDeckId = currentActiveDeck.value?.id || activeDeckId.value || 'mandarin-general';
+                  const primaryLang = currentActiveDeck.value?.language || activeLanguage.value || 'zh';
+                  await recordCompletedSession(primaryDeckId, primaryLang);
+                  if (isDbActive.value) {
+                    // Pass only cards modified in this session
+                    const practicedCards = nextDeck.filter(c => 
+                      c._originalIndex !== undefined && modifiedIndices.value.has(c._originalIndex)
+                    );
+                    await syncStats(practicedCards);
+                  }
+              }
+          }
+
+          isTransitioning.value = false;
+          selectedOptionIndex.value = null;
+          clickLock.value = false;
+      } else {
+          // Log error into daily metrics & update streak
+          if (currentCard.value) {
+            await logCardResult(currentCard.value, false);
+          }
+
+          mistakes.value += 1;
+          failedCard.value = currentCard.value;
+          if (currentCard.value && !roundFailedCards.value.some(c => c.hanzi === currentCard.value?.hanzi)) {
+            roundFailedCards.value.push(currentCard.value);
+          }
+          failedPhase.value = phase.value;
+          showFeedbackModal.value = true;
+
+          isTransitioning.value = false;
+          selectedOptionIndex.value = null;
+          clickLock.value = false;
+      }
   }, 600);
+}
+
+// Feedback Continue Handler
+const handleFeedbackContinue = async () => {
+  showFeedbackModal.value = false;
+  failedCard.value = null;
+  phase.value = 'DEFINITION';
+  toneCharIndex.value = 0;
+  pinyinCharIndex.value = 0;
+
+  const nextRoundCount = cardsPlayedInRound.value + 1;
+  cardsPlayedInRound.value = nextRoundCount;
+
+  if (nextRoundCount >= activeDeck.value.length) {
+      showRoundOver.value = true;
+      const primaryDeckId = currentActiveDeck.value?.id || activeDeckId.value || 'mandarin-general';
+      const primaryLang = currentActiveDeck.value?.language || activeLanguage.value || 'zh';
+      await recordCompletedSession(primaryDeckId, primaryLang);
+      if (isDbActive.value) {
+        const practicedCards = deck.value.filter(c => 
+          c._originalIndex !== undefined && modifiedIndices.value.has(c._originalIndex)
+        );
+        await syncStats(practicedCards);
+      }
+  } else {
+      currentCardIndex.value += 1;
+  }
+}
+
+// Exit Quiz Handler with session recording if cards were reviewed
+const handleExitQuiz = async () => {
+  if (cardsPlayedInRound.value >= Math.min(5, Math.ceil(roundLength.value / 2))) {
+    const primaryDeckId = currentActiveDeck.value?.id || activeDeckId.value || 'mandarin-general';
+    const primaryLang = currentActiveDeck.value?.language || activeLanguage.value || 'zh';
+    await recordCompletedSession(primaryDeckId, primaryLang);
+  }
+  view.value = 'LANDING';
 }
 
 // Restart game
@@ -323,9 +543,13 @@ const handleRestart = () => {
   currentCardIndex.value = 0;
   cardsPlayedInRound.value = 0;
   phase.value = 'DEFINITION';
+  toneCharIndex.value = 0;
+  pinyinCharIndex.value = 0;
   selectedOptionIndex.value = null;
   isTransitioning.value = false;
   clickLock.value = false;
+  showFeedbackModal.value = false;
+  failedCard.value = null;
   generateRoundDeck();
   modifiedIndices.value.clear();
 }
@@ -388,7 +612,17 @@ const handleAIAddCard = async (word: string) => {
 }
 
 // Config save handler
-const handleSaveSettings = (threshold: number, newIsRandom: boolean, newIsSoundEnabled: boolean, newHskLevels: number[], newRoundLength: number, newReviewRatio: number, newCategoryFilters: string[]) => {
+const handleSaveSettings = (
+  threshold: number, 
+  newIsRandom: boolean, 
+  newIsSoundEnabled: boolean, 
+  newHskLevels: number[], 
+  newRoundLength: number, 
+  newReviewRatio: number, 
+  newCategoryFilters: string[],
+  newSelectedDeckIds?: string[],
+  newDailyWordGoal?: number
+) => {
   masteryThreshold.value = threshold;
   isRandomOrder.value = newIsRandom;
   isSoundEnabled.value = newIsSoundEnabled;
@@ -396,6 +630,12 @@ const handleSaveSettings = (threshold: number, newIsRandom: boolean, newIsSoundE
   categoryFilters.value = newCategoryFilters;
   roundLength.value = newRoundLength;
   reviewRatio.value = newReviewRatio;
+  if (newSelectedDeckIds !== undefined) {
+    setSelectedReviewDeckIds(newSelectedDeckIds);
+  }
+  if (newDailyWordGoal !== undefined) {
+    setDailyWordGoal(newDailyWordGoal);
+  }
   
   cardsPlayedInRound.value = 0;
   
@@ -404,16 +644,21 @@ const handleSaveSettings = (threshold: number, newIsRandom: boolean, newIsSoundE
   }, 0);
   showSettings.value = false;
 }
+
+const getDeckName = (deckId?: string) => {
+  const d = decks.value.find(item => item.id === (deckId || 'mandarin-general'));
+  return d ? d.name : 'Mandarín General';
+}
 </script>
 
 <template>
-  <div class="h-screen w-screen bg-slate-900 text-slate-100 overflow-hidden font-sans">
+  <div class="h-screen w-screen bg-white text-slate-800 overflow-hidden font-sans">
     
     <!-- Loading screen -->
-    <div v-if="isDataLoading" class="h-screen w-screen flex items-center justify-center bg-slate-900 text-white">
+    <div v-if="isDataLoading" class="h-screen w-screen flex items-center justify-center bg-white text-slate-800">
       <div class="flex flex-col items-center gap-4">
-        <span class="w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></span>
-        <p>Loading your deck...</p>
+        <span class="w-8 h-8 border-4 border-orange-500 border-t-transparent rounded-full animate-spin"></span>
+        <p class="font-medium text-slate-600">Cargando tu mazo...</p>
       </div>
     </div>
 
@@ -421,80 +666,155 @@ const handleSaveSettings = (threshold: number, newIsRandom: boolean, newIsSoundE
     <template v-else>
       <LandingPage
         v-if="view === 'LANDING'"
-        :totalCards="deck.length"
+        :totalCards="sessionCards.length"
         :dueCardsCount="dueCardsCount"
         :masteredCardsCount="masteredCardsCount"
         :averageMastery="averageMastery"
+        :startingMastery="todayStartingMastery ?? averageMastery"
         :isExpanding="isExpanding"
+        :activeDeck="currentActiveDeck"
+        :deckCount="currentLanguageDecks.length"
+        :sessionScopeText="sessionScopeDescription.text"
+        :sessionScopeTitle="sessionScopeDescription.title"
+        :isAllDecks="sessionScopeDescription.isAll"
+        :streakCount="activeStreak"
+        :isStudiedToday="isStudiedToday"
+        :longestStreak="streak.longestStreak"
+        :failedCardsCount="failedCardsCount"
+        :todayUniqueWordsCount="todayUniqueWordsCount"
+        :todayCorrectUniqueWordsCount="todayCorrectUniqueWordsCount"
+        :yesterdayUniqueWordsCount="yesterdayUniqueWordsCount"
+        :todaySessionsCount="todaySessionsCount"
+        :yesterdaySessionsCount="yesterdaySessionsCount"
+        :dailyWordGoal="dailyWordGoal"
+        :dailyGoalProgress="dailyGoalProgress"
+        :isDailyGoalMet="isDailyGoalMet"
         @startQuiz="generateRoundDeck(); view = 'GAME';"
         @openDictionary="view = 'LIST'"
+        @openDeckManager="showDeckManagerModal = true"
+        @openMetrics="showMetricsModal = true"
         @openSettings="showSettings = true"
         @openCloud="showCloudPanel = true"
         @openStories="view = 'STORIES'"
+        @openReinforce="view = 'REINFORCE'"
         @startAiExpansion="handleStartAiExpansion"
+        @updateDailyGoal="setDailyWordGoal"
+      />
+
+      <ReinforceSection
+        v-if="view === 'REINFORCE'"
+        :cards="currentDeckCards"
+        :roundFailedCards="roundFailedCards"
+        :isSyncing="isSyncing"
+        @back="view = 'LANDING'"
+        @saveStory="addStory"
       />
 
       <CharacterList
         v-if="view === 'LIST'"
-        :deck="deck"
+        :deck="currentLanguageCards"
+        :decks="currentLanguageDecks"
+        :activeDeckId="activeDeckId"
+        :activeDeck="currentActiveDeck"
         @back="view = 'LANDING'"
         @addCard="addCard"
         @editCard="editCard"
         @deleteCard="deleteCard"
         @aiAddCard="handleAIAddCard"
+        @openImport="showImportModal = true"
+        @openDeckManager="showDeckManagerModal = true"
       />
 
       <StorySection
         v-if="view === 'STORIES'"
         :stories="stories"
+        :cards="currentDeckCards"
         @back="view = 'LANDING'"
         @addStory="addStory"
         @editStory="editStory"
         @deleteStory="deleteStory"
       />
 
-      <div v-if="view === 'GAME'" class="h-screen w-screen flex flex-col bg-slate-900 text-slate-900 overflow-hidden font-sans relative">
+      <div v-if="view === 'GAME'" class="h-screen w-screen flex flex-col bg-white text-slate-900 overflow-hidden font-sans relative">
         <!-- Quiz Header -->
-        <div class="absolute top-0 left-0 w-full z-20 px-6 py-4 flex justify-between items-center pointer-events-none">
-          <div class="flex flex-col">
-             <h2 class="text-sm font-bold text-slate-400 tracking-wider uppercase">Mandarin Flash</h2>
-             <span class="text-xs text-slate-300">
-               {{ activeDeck.length > 0 ? currentCardIndex + 1 : 0 }} / {{ activeDeck.length }} 
-               <span v-if="activeDeck.length !== deck.length">(of {{ deck.length }})</span>
+        <div class="absolute top-0 left-0 w-full z-20 px-6 pt-4 pb-2 flex justify-between items-center gap-4 pointer-events-none">
+          <!-- Izquierda: Idioma y mazo apilados verticalmente -->
+          <div class="flex flex-col items-start gap-1 shrink-0">
+             <h2 class="text-sm font-bold text-orange-600 tracking-wider uppercase leading-none">
+               <span>🇨🇳 Chino Mandarín</span>
+             </h2>
+             <span v-if="currentCard?.deckId" class="text-[11px] px-2.5 py-0.5 rounded-full bg-orange-50 text-orange-700 border border-orange-200 font-medium normal-case shadow-sm">
+               {{ getDeckName(currentCard.deckId) }}
              </span>
           </div>
-          <div class="flex items-center gap-3">
-            <div class="flex items-center space-x-2 animate-fade-in bg-slate-900/50 px-3 py-1.5 rounded-full backdrop-blur-sm border border-slate-700/50">
-               <span class="text-green-400 font-bold text-lg">✓</span>
-               <span class="text-slate-100 font-bold font-mono min-w-[1.5ch] text-center">{{ score }}</span>
+
+          <!-- Centro: Barra tipo Píldora + Aciertos y Errores al lado derecho -->
+          <div class="flex-1 max-w-3xl mx-auto flex items-center gap-3">
+            <div v-if="activeDeck.length > 0" class="flex-1 flex items-center gap-3 bg-white px-4 py-2 rounded-2xl shadow-sm border border-slate-200">
+              <div class="flex-1 h-3.5 bg-orange-50 rounded-full overflow-hidden p-0.5 border border-orange-200">
+                <div
+                  class="h-full rounded-full bg-orange-500 transition-all duration-500 ease-out relative"
+                  :style="{ width: `${Math.max(progress, 4)}%` }"
+                />
+              </div>
+
+              <div class="flex items-baseline gap-1.5 shrink-0 font-mono text-xs">
+                <span class="font-extrabold text-slate-800 text-sm">
+                  {{ currentCardIndex + 1 }}<span class="text-slate-400 font-normal mx-0.5">/</span>{{ activeDeck.length }}
+                </span>
+                <span v-if="activeDeck.length !== sessionCards.length" class="text-[11px] font-sans font-medium text-slate-500">
+                  (de {{ sessionCards.length }})
+                </span>
+                <span class="ml-1 px-1.5 py-0.5 rounded-md bg-orange-50 text-orange-600 font-bold text-[11px] border border-orange-200">
+                  {{ progress }}%
+                </span>
+              </div>
             </div>
-            <div class="flex items-center space-x-2 animate-fade-in bg-slate-900/50 px-3 py-1.5 rounded-full backdrop-blur-sm border border-slate-700/50">
-               <span class="text-red-500 font-bold text-lg">✗</span>
-               <span class="text-slate-100 font-bold font-mono min-w-[1.5ch] text-center">{{ mistakes }}</span>
+
+            <div class="flex items-center gap-2 shrink-0">
+              <div
+                class="hidden sm:flex items-center gap-1.5 animate-fade-in px-3 py-1.5 rounded-full border shadow-sm text-xs font-mono"
+                :class="isDailyGoalMet
+                  ? 'bg-emerald-50 border-emerald-300 text-emerald-700'
+                  : 'bg-white border-orange-200 text-slate-700'"
+                title="Palabras diferentes revisadas hoy vs. Meta diaria"
+              >
+                <span>{{ isDailyGoalMet ? '🏆' : '🎯' }}</span>
+                <span class="font-bold">{{ todayUniqueWordsCount }}/{{ dailyWordGoal }}</span>
+                <span class="text-[10px] font-sans uppercase font-bold tracking-wider" :class="isDailyGoalMet ? 'text-emerald-600' : 'text-orange-600'">
+                  hoy
+                </span>
+              </div>
+              <div class="flex items-center space-x-2 animate-fade-in bg-white px-3.5 py-1.5 rounded-full border border-slate-200 shadow-sm">
+                 <span class="text-emerald-600 font-bold text-base">✓</span>
+                 <span class="text-slate-800 font-bold font-mono min-w-[1.5ch] text-center">{{ score }}</span>
+              </div>
+              <div class="flex items-center space-x-2 animate-fade-in bg-white px-3.5 py-1.5 rounded-full border border-slate-200 shadow-sm">
+                 <span class="text-rose-600 font-bold text-base">✗</span>
+                 <span class="text-slate-800 font-bold font-mono min-w-[1.5ch] text-center">{{ mistakes }}</span>
+              </div>
             </div>
           </div>
-          <div class="pointer-events-auto flex items-center gap-2">
-               <Button variant="ghost" @click="view = 'LANDING'" class="bg-red-500/20 hover:bg-red-500/30 text-red-300 hover:text-red-200 shadow-sm backdrop-blur-md" title="Terminar Quiz">
+
+          <!-- Derecha: Botón Terminar -->
+          <div class="pointer-events-auto flex items-center gap-2 shrink-0">
+               <Button variant="ghost" @click="handleExitQuiz" class="bg-white hover:bg-orange-500 text-slate-700 hover:text-white border border-slate-200 hover:border-orange-500 shadow-sm transition-colors" title="Terminar Quiz">
                   Terminar
                </Button>
           </div>
         </div>
 
-        <div class="absolute top-0 left-0 w-full h-1 bg-slate-800 z-30">
-          <div class="h-full bg-indigo-500 transition-all duration-300 ease-out" :style="{ width: `${progress}%` }" />
-        </div>
-
         <!-- Quiz Gameplay -->
         <main class="flex-1 flex flex-col h-full relative">
-          <div v-if="activeDeck.length === 0" class="h-full w-full flex flex-col items-center justify-center bg-slate-900 text-white p-6 animate-fade-in">
+          <div v-if="activeDeck.length === 0" class="h-full w-full flex flex-col items-center justify-center bg-white text-slate-800 p-6 animate-fade-in">
              <div class="text-6xl mb-4">🎉</div>
-             <h1 class="text-4xl md:text-5xl font-serif text-slate-100 mb-4 text-center">
-                 {{ hskFilters.length > 0 ? "Levels Complete!" : "All Mastered!" }}
+             <h1 class="text-4xl md:text-5xl font-serif text-slate-900 mb-4 text-center">
+                 {{ hskFilters.length > 0 ? "¡Niveles Completados!" : "¡Todo al día!" }}
              </h1>
-             <p class="text-slate-400 text-center max-w-md mb-8">
+             <p class="text-slate-600 text-center max-w-md mb-8">
                {{ hskFilters.length > 0 
-                  ? `You have finished all available cards for HSK Levels: ${hskFilters.join(', ')}.` 
-                  : `You have mastered all characters in the current deck based on your threshold settings.`
+                  ? `Has completado las tarjetas disponibles para los niveles seleccionados.` 
+                  : `Has repasado o dominado todas las tarjetas disponibles en este mazo.`
                }}
              </p>
              <div class="flex gap-4">
@@ -507,7 +827,22 @@ const handleSaveSettings = (threshold: number, newIsRandom: boolean, newIsSoundE
               :card="currentCard" 
               :isAnimating="isTransitioning && selectedOptionIndex === null" 
               :showPinyin="false" 
-              :instruction="phase === 'DEFINITION' ? 'Select Meaning' : 'Select Pinyin'" 
+              :activeCharIndex="
+                phase === 'TONE' 
+                  ? (currentCardTones[toneCharIndex]?.charIndex ?? toneCharIndex) 
+                  : phase === 'PINYIN' && currentCardTones.length > 0 && currentCard?.type !== 'sentence'
+                    ? (currentCardTones[pinyinCharIndex]?.charIndex ?? pinyinCharIndex)
+                    : null
+              "
+              :instruction="
+                phase === 'DEFINITION'
+                  ? 'Selecciona el Significado'
+                  : phase === 'TONE'
+                    ? `Selecciona el Tono (${toneCharIndex + 1}/${currentCardTones.length})`
+                    : (currentCardTones.length > 1 && currentCard?.type !== 'sentence'
+                        ? `Selecciona el Pinyin (${pinyinCharIndex + 1}/${currentCardTones.length})`
+                        : 'Selecciona el Pinyin')
+              " 
             />
             <BottomHalf 
               :options="currentOptions" 
@@ -521,6 +856,28 @@ const handleSaveSettings = (threshold: number, newIsRandom: boolean, newIsSoundE
       </div>
 
       <!-- Modals -->
+      <CardFeedbackModal
+        v-if="showFeedbackModal && failedCard"
+        :card="failedCard"
+        :failedPhase="failedPhase"
+        @continue="handleFeedbackContinue"
+        @reinforce="showFeedbackModal = false; view = 'REINFORCE';"
+      />
+
+      <DeckManagerModal
+        v-if="showDeckManagerModal"
+        :decks="currentLanguageDecks"
+        :activeDeckId="activeDeckId"
+        :allCards="deck"
+        :selectedReviewDeckIds="selectedReviewDeckIds"
+        @selectDeck="(id) => { setActiveDeck(id); }"
+        @createDeck="createDeck"
+        @editDeck="editDeck"
+        @deleteDeck="deleteDeck"
+        @openSettings="showSettings = true"
+        @close="showDeckManagerModal = false"
+      />
+
       <SettingsModal 
         v-if="showSettings" 
         :currentThreshold="masteryThreshold"
@@ -531,6 +888,9 @@ const handleSaveSettings = (threshold: number, newIsRandom: boolean, newIsSoundE
         :currentReviewRatio="reviewRatio"
         :currentCategoryFilters="categoryFilters"
         :allCategories="allCategories"
+        :availableDecks="currentLanguageDecks"
+        :currentSelectedDeckIds="selectedReviewDeckIds"
+        :currentDailyWordGoal="dailyWordGoal"
         @save="handleSaveSettings"
         @cancel="showSettings = false"
         @openImport="showSettings = false; showImportModal = true;"
@@ -539,7 +899,9 @@ const handleSaveSettings = (threshold: number, newIsRandom: boolean, newIsSoundE
       <ImportDeckModal
         v-if="showImportModal"
         :existingDeck="deck"
-        @import="batchAddCards"
+        :decks="decks"
+        :activeDeckId="activeDeckId"
+        @import="handleBatchImport"
         @cancel="showImportModal = false"
       />
 
@@ -554,8 +916,26 @@ const handleSaveSettings = (threshold: number, newIsRandom: boolean, newIsSoundE
         v-if="showRoundOver"
         :roundLength="roundLength"
         :isSyncing="isSyncing"
+        :streakCount="activeStreak"
+        :roundScore="score"
+        :roundMistakes="mistakes"
+        :todayUniqueWordsCount="todayUniqueWordsCount"
+        :dailyWordGoal="dailyWordGoal"
+        :dailyGoalProgress="dailyGoalProgress"
+        :isDailyGoalMet="isDailyGoalMet"
+        :startingMastery="todayStartingMastery ?? averageMastery"
+        :averageMastery="averageMastery"
         @nextRound="handleNextRound"
+        @reinforceRound="showRoundOver = false; view = 'REINFORCE';"
         @goHome="showRoundOver = false; view = 'LANDING';"
+      />
+
+      <MetricsModal
+        v-if="showMetricsModal"
+        :availableDecks="decks"
+        :currentLanguage="activeLanguage"
+        :currentDeckId="activeDeckId"
+        @close="showMetricsModal = false"
       />
     </template>
   </div>

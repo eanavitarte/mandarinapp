@@ -3,9 +3,23 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
   modules: ['@nuxtjs/tailwindcss'],
+  tailwindcss: {
+    config: {
+      content: [
+        './app/**/*.{vue,js,ts,jsx,tsx}'
+      ]
+    }
+  },
   css: ['~/assets/css/main.css'],
   future: {
     compatibilityVersion: 4,
+  },
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' }
+      ]
+    }
   },
   runtimeConfig: {
     // Only available on the server side
