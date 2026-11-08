@@ -7,8 +7,8 @@ WORKDIR /app
 # Copia los manifiestos de dependencias
 COPY package*.json ./
 
-# Instalación limpia y reproducible
-RUN npm ci
+# Instalación limpia y reproducible (ignora scripts en etapa deps para evitar que nuxt prepare falle sin fuentes)
+RUN npm ci --ignore-scripts
 
 # =========================================================================
 # ETAPA 2: Compilación de la aplicación (Nuxt 4 / Nitro)
