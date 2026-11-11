@@ -45,7 +45,11 @@ const definitionFontSizeClass = computed(() => {
 <template>
   <div class="h-1/2 w-full bg-white flex flex-col items-center justify-center pt-16 pb-10 relative overflow-hidden border-b border-slate-200">
     <div class="transition-all duration-300 transform flex flex-col items-center w-full px-4" :class="isAnimating ? 'opacity-0 scale-95 translate-y-4' : 'opacity-100 scale-100 translate-y-0'">
-      <h1 v-if="activeCharIndex === null" :class="[fontSizeClass, 'font-serif text-slate-900 mb-3 select-none text-center px-4 leading-tight break-all']">
+      <h1
+        v-if="activeCharIndex === null"
+        :class="[fontSizeClass, 'font-serif text-slate-900 mb-3 select-none text-center px-4 leading-tight break-all']"
+        style="text-shadow: 1px 1px 2px #8f8f8f;"
+      >
         {{ card?.hanzi }}
       </h1>
       <h1 v-else :class="[fontSizeClass, 'font-serif mb-3 select-none text-center px-4 leading-tight break-all']">

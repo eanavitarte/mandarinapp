@@ -4,6 +4,11 @@ Todos los cambios notables de este proyecto se documentarán en este archivo.
 
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [v0.2.1] - 2026-11-11
+
+### Changed
+- Sombra tipográfica (`text-shadow: 1px 1px 2px #8f8f8f`) en el `<h1>` principal de `app/components/TopHalf.vue` cuando no hay carácter resaltado en recuadro (`activeCharIndex === null`) para mejorar la legibilidad del hanzi sobre fondo blanco.
+
 ## [v0.2.0] - 2026-11-11
 
 ### Added
