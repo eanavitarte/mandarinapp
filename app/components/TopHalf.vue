@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { Flashcard } from '~/types'
+import { getToneStyle } from '~/constants/tones'
 
 const props = withDefaults(defineProps<{
   card: Flashcard
@@ -9,14 +10,21 @@ const props = withDefaults(defineProps<{
   showDefinition?: boolean
   instruction?: string
   activeCharIndex?: number | null
+  activeCharTone?: number | null
 }>(), {
   showPinyin: true,
   showDefinition: false,
   instruction: "Identify Character",
-  activeCharIndex: null
+  activeCharIndex: null,
+  activeCharTone: null
 })
 
 const { formatPinyinDisplay } = usePinyin()
+
+const activeCharBadgeStyle = computed(() => {
+  if (!props.activeCharTone) return undefined
+  return { backgroundColor: getToneStyle(props.activeCharTone).badgeBgHex }
+})
 
 const hanziChars = computed(() => Array.from(props.card?.hanzi || ''))
 const textLength = computed(() => hanziChars.value.length)
@@ -28,9 +36,9 @@ const fontSizeClass = computed(() => {
 })
 const definitionFontSizeClass = computed(() => {
   const defLength = (props.card?.definition || '').length
-  if (defLength < 35) return 'text-lg md:text-xl'
-  if (defLength < 70) return 'text-base md:text-lg'
-  return 'text-sm md:text-base'
+  if (defLength < 35) return 'text-[20px] md:text-[22px]'
+  if (defLength < 70) return 'text-[18px] md:text-[20px]'
+  return 'text-[16px] md:text-[18px]'
 })
 </script>
 
@@ -47,13 +55,17 @@ const definitionFontSizeClass = computed(() => {
           :class="[
             'transition-all duration-200 inline-block',
             idx === activeCharIndex
-              ? 'text-orange-600 underline decoration-orange-500 decoration-4 underline-offset-8 scale-105'
+              ? [
+                  'text-white rounded-[0.18em] px-[0.14em] py-[0.03em] mx-[0.06em] shadow-md scale-105',
+                  activeCharTone ? '' : 'bg-slate-900'
+                ]
               : 'text-slate-300'
           ]"
+          :style="idx === activeCharIndex ? activeCharBadgeStyle : undefined"
         >{{ char }}</span>
       </h1>
       <div
-        class="w-full max-w-2xl h-14 px-4 bg-white border-0 flex items-center justify-center overflow-hidden"
+        class="w-full max-w-2xl h-16 px-4 bg-white border-0 flex items-center justify-center overflow-hidden"
         aria-live="polite"
       >
         <p

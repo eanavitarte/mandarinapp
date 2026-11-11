@@ -4,6 +4,20 @@ Todos los cambios notables de este proyecto se documentarán en este archivo.
 
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y este proyecto sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [v0.2.0] - 2026-11-11
+
+### Added
+- Componente reutilizable `app/components/CardEditModal.vue` extraído desde el diccionario para editar tarjetas (básicos, fonética, Hanban y SRS).
+- Botón de ajustes rápido junto a `Terminar` en `app/pages/index.vue` (`openQuickEdit` / `handleQuickEditSave`) para editar la tarjeta en curso, sincronizar `activeDeck` al instante y reiniciar la tarjeta a la fase `DEFINITION`.
+- Componente `app/components/ToneIcon.vue` para compartir los trazos SVG de los 5 tonos entre las fases `TONE` y `PINYIN`.
+- Propiedad `badgeBgHex` en `TONE_STYLES` (`app/constants/tones.ts`) con fondos oscurecidos de alto contraste por tono (`#B8470B`, `#367646`, `#C12727`, `#1D5F8C`, `#6E7278`).
+
+### Changed
+- Resaltado del carácter activo en `app/components/TopHalf.vue` sin color naranja en fase `TONE` (tarjeta invertida neutra `bg-slate-900 text-white`) y usando el fondo oscurecido del tono (`activeCharTone` → `badgeBgHex`) durante la fase `PINYIN`.
+- Incremento de `+2 px` en `definitionFontSizeClass` (`20/22 px`, `18/20 px`, `16/18 px`) y altura fija `h-16` en `app/components/TopHalf.vue` para destacar la traducción revelada.
+- Coloración completa y recordatorio SVG flotante (`ToneIcon` posicionado con `absolute bottom-full`) en todas las opciones de la fase `PINYIN` dentro de `app/components/BottomHalf.vue` sin desplazar verticalmente las sílabas.
+- Refactorización de `app/components/CharacterList.vue` para consumir `CardEditModal.vue` evitando duplicación de formulario.
+
 ## [v0.1.0] - 2026-11-11
 
 ### Added

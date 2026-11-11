@@ -8,6 +8,7 @@ export interface ToneStyle {
   hoverBgClass: string;
   hoverBorderClass: string;
   hex: string;
+  badgeBgHex: string;
 }
 
 export const TONE_STYLES: Record<number, ToneStyle> = {
@@ -20,7 +21,8 @@ export const TONE_STYLES: Record<number, ToneStyle> = {
     borderClass: 'border-orange-500/40',
     hoverBgClass: 'hover:bg-orange-50',
     hoverBorderClass: 'hover:border-orange-500',
-    hex: '#EA580C'
+    hex: '#EA580C',
+    badgeBgHex: '#B8470B'
   },
   2: {
     label: '2° Tono',
@@ -31,7 +33,8 @@ export const TONE_STYLES: Record<number, ToneStyle> = {
     borderClass: 'border-emerald-500/40',
     hoverBgClass: 'hover:bg-emerald-50',
     hoverBorderClass: 'hover:border-emerald-500',
-    hex: '#059669'
+    hex: '#059669',
+    badgeBgHex: '#367646'
   },
   3: {
     label: '3° Tono',
@@ -42,7 +45,8 @@ export const TONE_STYLES: Record<number, ToneStyle> = {
     borderClass: 'border-rose-500/40',
     hoverBgClass: 'hover:bg-rose-50',
     hoverBorderClass: 'hover:border-rose-500',
-    hex: '#E11D48'
+    hex: '#E11D48',
+    badgeBgHex: '#C12727'
   },
   4: {
     label: '4° Tono',
@@ -53,7 +57,8 @@ export const TONE_STYLES: Record<number, ToneStyle> = {
     borderClass: 'border-sky-500/40',
     hoverBgClass: 'hover:bg-sky-50',
     hoverBorderClass: 'hover:border-sky-500',
-    hex: '#0284C7'
+    hex: '#0284C7',
+    badgeBgHex: '#1D5F8C'
   },
   5: {
     label: '5° Tono',
@@ -64,7 +69,8 @@ export const TONE_STYLES: Record<number, ToneStyle> = {
     borderClass: 'border-slate-400/40',
     hoverBgClass: 'hover:bg-slate-50',
     hoverBorderClass: 'hover:border-slate-400',
-    hex: '#64748B'
+    hex: '#64748B',
+    badgeBgHex: '#6E7278'
   }
 };
 

@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import type { QuizOption } from '~/types'
 import { getToneStyle } from '~/constants/tones'
+import ToneIcon from './ToneIcon.vue'
 
 const props = defineProps<{
   options: QuizOption[]
   disabled: boolean
   selectedOptionIndex: number | null
   showFeedback: boolean
+  reminderTone?: number | null
 }>()
 
 const emit = defineEmits<{
@@ -38,8 +40,9 @@ const getButtonStyle = (option: QuizOption, index: number) => {
     }
   }
 
-  if (option.tone) {
-    const toneStyle = getToneStyle(option.tone)
+  const activeTone = option.tone || props.reminderTone
+  if (activeTone) {
+    const toneStyle = getToneStyle(activeTone)
     return `border-slate-200 bg-white ${toneStyle.hoverBorderClass} ${toneStyle.hoverBgClass} shadow-sm`
   }
 
@@ -74,46 +77,26 @@ const getButtonStyle = (option: QuizOption, index: number) => {
             color: isOptionHighlighted(option, index) ? '#ffffff' : getToneStyle(option.tone).hex
           }"
         >
-          <svg
-            viewBox="0 0 100 100"
-            class="w-16 h-16 md:w-20 md:h-20 overflow-visible"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="8"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <!-- 1° Tono: Barra horizontal plana (alto sostenido) -->
-            <template v-if="option.tone === 1">
-              <path d="M 16 50 L 84 50" />
-            </template>
-
-            <!-- 2° Tono: Flecha diagonal ascendente -->
-            <template v-else-if="option.tone === 2">
-              <path d="M 20 76 L 78 22" />
-              <path d="M 52 22 L 78 22 L 78 48" />
-            </template>
-
-            <!-- 3° Tono: Flecha quebrada que baja y sube -->
-            <template v-else-if="option.tone === 3">
-              <path d="M 14 30 L 48 74 L 84 24" />
-              <path d="M 60 24 L 84 24 L 84 48" />
-            </template>
-
-            <!-- 4° Tono: Flecha diagonal descendente -->
-            <template v-else-if="option.tone === 4">
-              <path d="M 20 22 L 78 76" />
-              <path d="M 52 76 L 78 76 L 78 50" />
-            </template>
-
-            <!-- 5° Tono (Neutro): Punto circular sólido -->
-            <template v-else>
-              <circle cx="50" cy="50" r="11" fill="currentColor" stroke="none" />
-            </template>
-          </svg>
+          <ToneIcon :tone="option.tone" class="w-16 h-16 md:w-20 md:h-20" />
         </div>
 
-        <span v-else class="z-10 text-center break-words max-w-full">
+        <span
+          v-else
+          :class="[
+            'relative inline-block z-10 text-center break-words max-w-full',
+            reminderTone && !isOptionHighlighted(option, index) ? getToneStyle(reminderTone).textClass : ''
+          ]"
+          :style="reminderTone ? {
+            color: isOptionHighlighted(option, index) ? '#ffffff' : getToneStyle(reminderTone).hex
+          } : undefined"
+        >
+          <span
+            v-if="reminderTone"
+            class="pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-0.5 sm:mb-1 md:mb-1.5 flex items-center justify-center"
+            aria-hidden="true"
+          >
+            <ToneIcon :tone="reminderTone" class="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
+          </span>
           {{ option.definition }}
         </span>
       </button>

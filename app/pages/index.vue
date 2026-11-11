@@ -135,6 +135,7 @@ const showFeedbackModal = ref(false)
 const showMetricsModal = ref(false)
 const failedCard = ref<Flashcard | null>(null)
 const failedPhase = ref<QuizPhase>('DEFINITION')
+const quickEditCard = ref<Flashcard | null>(null)
 
 // Selectors
 const dueCardsCount = computed(() => {
@@ -191,6 +192,14 @@ const currentCard = computed(() => {
 const currentCardTones = computed(() => {
   if (!currentCard.value) return [];
   return extractCardTones(currentCard.value.hanzi, currentCard.value.pinyin);
+})
+
+const currentPinyinReminderTone = computed<number | null>(() => {
+  if (phase.value !== 'PINYIN' || !currentCard.value || currentCard.value.type === 'sentence') {
+    return null;
+  }
+  if (currentCardTones.value.length === 0) return null;
+  return currentCardTones.value[pinyinCharIndex.value]?.tone ?? null;
 })
 
 // Multiple Choice Shuffler helper
@@ -649,6 +658,28 @@ const getDeckName = (deckId?: string) => {
   const d = decks.value.find(item => item.id === (deckId || 'mandarin-general'));
   return d ? d.name : 'Mandarín General';
 }
+
+const openQuickEdit = () => {
+  if (!currentCard.value || isTransitioning.value) return;
+  quickEditCard.value = currentCard.value;
+}
+
+const handleQuickEditSave = async (id: string, updates: Partial<Flashcard>) => {
+  await editCard(id, updates);
+
+  const updatedCard = deck.value.find(c => c.id === id);
+  if (updatedCard) {
+    activeDeck.value = activeDeck.value.map(c => c.id === id ? updatedCard : c);
+  }
+
+  quickEditCard.value = null;
+  phase.value = 'DEFINITION';
+  toneCharIndex.value = 0;
+  pinyinCharIndex.value = 0;
+  selectedOptionIndex.value = null;
+  isTransitioning.value = false;
+  clickLock.value = false;
+}
 </script>
 
 <template>
@@ -796,11 +827,25 @@ const getDeckName = (deckId?: string) => {
             </div>
           </div>
 
-          <!-- Derecha: Botón Terminar -->
+          <!-- Derecha: Botón Terminar y Ajuste Rápido -->
           <div class="pointer-events-auto flex items-center gap-2 shrink-0">
                <Button variant="ghost" @click="handleExitQuiz" class="bg-white hover:bg-orange-500 text-slate-700 hover:text-white border border-slate-200 hover:border-orange-500 shadow-sm transition-colors" title="Terminar Quiz">
                   Terminar
                </Button>
+               <button
+                 v-if="activeDeck.length > 0 && currentCard"
+                 type="button"
+                 @click="openQuickEdit"
+                 :disabled="isTransitioning"
+                 class="p-2.5 rounded-xl bg-white hover:bg-orange-50 text-slate-600 hover:text-orange-600 border border-slate-200 hover:border-orange-300 shadow-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                 title="Editar carácter actual"
+                 aria-label="Editar carácter actual"
+               >
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
+                   <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
+                   <circle cx="12" cy="12" r="3" />
+                 </svg>
+               </button>
           </div>
         </div>
 
@@ -835,6 +880,7 @@ const getDeckName = (deckId?: string) => {
                     ? (currentCardTones[pinyinCharIndex]?.charIndex ?? pinyinCharIndex)
                     : null
               "
+              :activeCharTone="currentPinyinReminderTone"
               :instruction="
                 phase === 'DEFINITION'
                   ? 'Selecciona el Significado'
@@ -851,6 +897,7 @@ const getDeckName = (deckId?: string) => {
               :disabled="isTransitioning" 
               :selectedOptionIndex="selectedOptionIndex" 
               :showFeedback="isTransitioning" 
+              :reminderTone="currentPinyinReminderTone"
             />
           </template>
         </main>
@@ -863,6 +910,15 @@ const getDeckName = (deckId?: string) => {
         :failedPhase="failedPhase"
         @continue="handleFeedbackContinue"
         @reinforce="showFeedbackModal = false; view = 'REINFORCE';"
+      />
+
+      <CardEditModal
+        :card="quickEditCard"
+        :decks="currentLanguageDecks"
+        :activeDeckId="activeDeckId"
+        @close="quickEditCard = null"
+        @save="handleQuickEditSave"
+        @openDeckManager="showDeckManagerModal = true"
       />
 
       <DeckManagerModal
