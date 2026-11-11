@@ -827,6 +827,7 @@ const getDeckName = (deckId?: string) => {
               :card="currentCard" 
               :isAnimating="isTransitioning && selectedOptionIndex === null" 
               :showPinyin="false" 
+              :showDefinition="phase !== 'DEFINITION'"
               :activeCharIndex="
                 phase === 'TONE' 
                   ? (currentCardTones[toneCharIndex]?.charIndex ?? toneCharIndex) 
